@@ -1,12 +1,17 @@
-import React from 'react'
-import { Text } from 'react-native'
+import React, { useContext } from 'react'
 
+import AuthenticationContext from '../../Contexts/Authentication'
 import AuthenticationLayout from '../../Layouts/Authentication'
+import Welcome from './Welcome'
+import Signup from './Signup'
 
 export default function App() {
+  const { step } = useContext(AuthenticationContext)
+
   return (
     <AuthenticationLayout>
-      <Text>Open up App.js to start working on your app!</Text>
+      {step === 'welcome' && <Welcome />}
+      {step === 'signup' && <Signup />}
     </AuthenticationLayout>
   )
 }

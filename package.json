@@ -19,6 +19,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
     "expo": "~36.0.0",
+    "formik": "^2.1.4",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.9",
     "prettier": "^2.0.2",
@@ -27,7 +28,8 @@
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-web": "~0.11.7",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "yup": "^0.28.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -39,7 +41,7 @@
     }
   },
   "lint-staged": {
-    "{Components,Layouts}/**/*.js": [
+    "{Components,Layouts,Contexts}/**/*.js": [
       "prettier --write",
       "eslint --fix",
       "git add",
